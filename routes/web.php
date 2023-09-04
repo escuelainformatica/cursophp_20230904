@@ -17,4 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/listar',[ActorController::class,'listar']);
+Route::get('/listar',[ActorController::class,'listar'])->name("listar");
+Route::get('/modificar/{id}',[ActorController::class,'formulariomodificar']);
+Route::post('/modificar/{id}',[ActorController::class,'formulariomodificarPost']);
+Route::get('/formulario',[ActorController::class,'formulario']);
+Route::post('/formulario',[ActorController::class,'formularioPost']);

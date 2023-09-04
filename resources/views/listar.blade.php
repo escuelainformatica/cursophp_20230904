@@ -23,11 +23,15 @@
 
 <table class="table">
     <thead>
-        <tr><th>nombre</th><th>apellido</th></tr>
+        <tr><th>nombre</th><th>apellido</th><th>modificar</th></tr>
     </thead>
     <tbody>
     @foreach($actores as $actor)
-       <tr><td>{{$actor['first_name']}}</td><td>{{$actor['last_name']}}</td></tr>
+       <tr>
+        <td>{{$actor['first_name']}}</td>
+        <td>{{$actor['last_name']}}</td>
+        <td><a href="/modificar/{{$actor['actor_id']}}">modificar</a></td>
+    </tr>
     @endforeach
     </tbody>
 </table>
